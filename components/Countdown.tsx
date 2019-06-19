@@ -30,8 +30,10 @@ export const Countdown: React.FC<Props> = ({ blastoff }) => {
   }, [secondsRemaining]);
 
   const calculateCountdown = () => {
-    const end = new Date(blastoff).toLocaleDateString();
+    const end = new Date(blastoff).toISOString();
+    console.log('END', end);
     const now = new Date().toISOString();
+    console.log('NOW', now);
     let diff = (Date.parse(end) - Date.parse(now)) / 1000;
 
     if (diff <= 0) return false;
@@ -86,7 +88,8 @@ export const Countdown: React.FC<Props> = ({ blastoff }) => {
   if (secondsRemaining) {
     return (
       <div>
-        <span style={numberStyles}>{daysRemaining}</span> days{' '}
+        <span style={numberStyles}>{daysRemaining}</span>{' '}
+        {daysRemaining === 1 ? 'day' : 'days'}{' '}
         <span style={numberStyles}>{addLeadingZeros(hoursRemaining)}</span>{' '}
         hours{' '}
         <span style={numberStyles}>{addLeadingZeros(minutesRemaining)}</span>{' '}

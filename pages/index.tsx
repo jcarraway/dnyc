@@ -11,9 +11,10 @@ import {
   mondayEvents,
 } from '../utils/events';
 
-const flightDeparture = new Date('June 20, 2019 03:24:00');
+const flightDeparture = new Date(2019, 5, 20, 14, 39, 0);
 
 const Home: React.FC = () => {
+  console.log('FLIGHT', flightDeparture);
   return (
     <Layout>
       <Countdown blastoff={flightDeparture} />
