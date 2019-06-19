@@ -2,13 +2,12 @@ import * as React from 'react';
 import Head from 'next/head';
 
 import { colors, breakpoints } from '../utils/theme';
-// import { Nav } from './Nav';
 
 type Props = {
   title?: string;
 };
 
-export const Layout: React.FC<Props> = ({ children, title = 'DNYC' }) => (
+export const Layout: React.FC<Props> = ({ children, title = 'D!NYC' }) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -47,7 +46,7 @@ export const Layout: React.FC<Props> = ({ children, title = 'DNYC' }) => (
       @media all and (max-width: ${breakpoints.small}) {
         html,
         body {
-          padding: 1em 1em 1em;
+          padding: 0.2em 0.2em 0.2em;
         }
       }
       a {
@@ -56,6 +55,9 @@ export const Layout: React.FC<Props> = ({ children, title = 'DNYC' }) => (
       }
       h1 {
         color: ${colors.lightEmphasisColor};
+      }
+      h4 {
+        margin: 0;
       }
       footer {
         flex: 2;
@@ -68,6 +70,7 @@ export const Layout: React.FC<Props> = ({ children, title = 'DNYC' }) => (
       }
       p {
         text-align: justify;
+        margin: 0;
       }
       li {
         text-align: justify;

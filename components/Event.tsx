@@ -9,11 +9,11 @@ interface Props {
 export const Event: React.FC<Props> = ({ event }) => {
   const { title, titleLink, titleText, description } = event;
   return (
-    <div>
+    <li>
       <h4>
         {title} {titleLink && <a href={titleLink}>{titleText}</a>}
       </h4>
       {!!description && <p>{description}</p>}
-    </div>
+    </li>
   );
 };

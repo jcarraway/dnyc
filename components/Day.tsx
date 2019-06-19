@@ -13,7 +13,11 @@ export const Day: React.FC<Props> = ({ date, events }) => {
     <div>
       <h2>{date}</h2>
       {events.map(e => {
-        return <Event key={`${e.title}-${e.description}`} event={e} />;
+        return (
+          <ul key={`${e.title}-${e.description}`}>
+            <Event event={e} />
+          </ul>
+        );
       })}
     </div>
   );

@@ -1,9 +1,9 @@
 export const colors = {
-  lightBackground: '#fdf6e3',
+  lightBackground: '#ffffff',
   darkBackground: '#002b36',
   lightBodyText: '#657b83',
   darkBodyText: '#839496',
-  brandColor: '#d33682',
+  brandColor: 'blue',
   darkEmphasisColor: '#93a1a1',
   lightEmphasisColor: '#586e75',
   green: '#859900',

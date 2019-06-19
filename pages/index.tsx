@@ -15,8 +15,9 @@ const flightDeparture = new Date('June 20, 2019 03:24:00');
 
 const Home: React.FC = () => {
   return (
-    <Layout title="DNYC">
+    <Layout>
       <Countdown blastoff={flightDeparture} />
+      <a href="/packing-list">Packing List >></a>
       <Day date={'Thursday'} events={thursdayEvents} />
       <Day date={'Friday'} events={fridayEvents} />
       <Day date={'Saturday'} events={saturdayEvents} />

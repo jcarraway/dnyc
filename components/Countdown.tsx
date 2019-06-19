@@ -70,10 +70,35 @@ export const Countdown: React.FC<Props> = ({ blastoff }) => {
     return timeLeft;
   };
 
-  return (
-    <div>
-      You have {daysRemaining} days, {hoursRemaining} hours, and{' '}
-      {minutesRemaining} minutes and {secondsRemaining} seconds until NYC
-    </div>
-  );
+  const numberStyles = {
+    color: 'red',
+    fontSize: 32,
+  };
+
+  const addLeadingZeros = (value: any) => {
+    value = String(value);
+    while (value.length < 2) {
+      value = '0' + value;
+    }
+    return value;
+  };
+
+  if (secondsRemaining) {
+    return (
+      <div>
+        <span style={numberStyles}>{daysRemaining}</span> days{' '}
+        <span style={numberStyles}>{addLeadingZeros(hoursRemaining)}</span>{' '}
+        hours{' '}
+        <span style={numberStyles}>{addLeadingZeros(minutesRemaining)}</span>{' '}
+        minutes{' '}
+        {secondsRemaining === 60 ? (
+          <span style={numberStyles}>{'00'}</span>
+        ) : (
+          <span style={numberStyles}>{addLeadingZeros(secondsRemaining)}</span>
+        )}{' '}
+        seconds until takeoff
+      </div>
+    );
+  }
+  return <div style={{ height: 48 }}>...calculating countdown</div>;
 };

@@ -12,7 +12,7 @@ export const thursdayEvents: IEvent[] = [
       'https://www.flightstats.com/v2/flight-tracker/AA/4115?year=2019&month=06&date=20&flightId=1003992373',
     titleText: 'Flight tracker',
     description:
-      "Leave GSO @ 2:39pm and arrive LGA @ 4:24pm. We'll pick you up in our <a href='/ourcar'>car</a>",
+      "Leave GSO @ 2:39pm and arrive LGA @ 4:24pm. We'll pick you up!",
   },
   {
     title: 'Dinner @ 8:30pm',
@@ -44,7 +44,7 @@ export const saturdayEvents = [
     description: 'Wear comfy clothes that can get wet',
   },
   {
-    title: 'Brunch @',
+    title: 'Brunch @ 11:30',
     titleLink: '/brunch-options',
     titleText: 'Brunch Options',
     description: 'Classic NYC Saturday',
@@ -56,13 +56,13 @@ export const saturdayEvents = [
 ];
 export const sundayEvents = [
   {
-    title: '@ ?',
+    title: 'Art browsing @ ?',
     titleLink: 'https://www.metmuseum.org/',
     titleText: 'The Met',
     description: 'Art! History!',
   },
   {
-    title: '@ ?',
+    title: 'Lunch @ ?',
     titleLink: 'https://www.neuegalerie.org/cafes/sabarsky',
     titleText: 'Cafe Sabarsky',
     description: 'Dress smart and prepare for chocolate',
